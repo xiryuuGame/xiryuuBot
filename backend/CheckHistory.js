@@ -1,6 +1,6 @@
 import fs from "fs";
 const historyPath = "./assets/historyChat.json";
-function checkHistory() {
+async function checkHistory() {
   if (!fs.existsSync("./assets/")) {
     fs.mkdirSync("./assets/");
   }
@@ -8,4 +8,4 @@ function checkHistory() {
     fs.writeFileSync(historyPath, JSON.stringify({ 1: [] }));
   }
 }
-export default module;
+export default checkHistory;
